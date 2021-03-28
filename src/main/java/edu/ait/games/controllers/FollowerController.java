@@ -1,8 +1,8 @@
-package edu.ait.gameCollection.controllers;
+package edu.ait.games.controllers;
 
-import edu.ait.gameCollection.dto.Follower;
-import edu.ait.gameCollection.repositories.exceptions.ReviewNotFoundException;
-import edu.ait.gameCollection.repositories.FollowerRepository;
+import edu.ait.games.dto.Follower;
+import edu.ait.games.repositories.exceptions.ReviewNotFoundException;
+import edu.ait.games.repositories.FollowerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

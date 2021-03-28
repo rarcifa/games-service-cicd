@@ -1,8 +1,8 @@
-package edu.ait.gameCollection.controllers;
+package edu.ait.games.controllers;
 
-import edu.ait.gameCollection.dto.Game;
-import edu.ait.gameCollection.repositories.exceptions.GameNotFoundException;
-import edu.ait.gameCollection.repositories.GameRepository;
+import edu.ait.games.dto.Game;
+import edu.ait.games.repositories.exceptions.GameNotFoundException;
+import edu.ait.games.repositories.GameRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.data.domain.Page;
@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
-import java.util.List;
 import java.util.Optional;
 
 @RestController

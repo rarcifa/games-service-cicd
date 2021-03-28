@@ -1,4 +1,4 @@
-package edu.ait.gameCollection.dto;
+package edu.ait.games.dto;
 
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
@@ -16,37 +16,30 @@ public class Game implements Serializable {
     private Integer id;
 
     private String name;
-    private String cover;
-    private String console;
     private String publisher;
     private String genre;
     private String releasedate;
     private String metascore;
     private String ignscore;
-    private String igdbscore;
-    //@Lob
-    //private String description1;
+
     @OneToMany
     @JoinColumn(name = "Id")
-    private List<Review> review;
+    private List<edu.ait.games.dto.Review> review;
 
     @OneToMany
     @JoinColumn(name = "follower_id")
-    private List<Follower> follower;
+    private List<edu.ait.games.dto.Follower> follower;
     public Game() {
     }
 
-    public Game(Integer id, String name, String publisher, String genre, String releasedate, String cover, String console, String metascore, String ignscore, String igdbscore) {
+    public Game(Integer id, String name, String publisher, String genre, String releasedate, String metascore, String ignscore) {
         this.id = id;
         this.name = name;
         this.publisher = publisher;
         this.genre = genre;
         this.releasedate = releasedate;
-        this.cover = cover;
-        this.console = console;
         this.metascore = metascore;
         this.ignscore = ignscore;
-        this.igdbscore = igdbscore;
     }
 
     // Setters
@@ -70,24 +63,12 @@ public class Game implements Serializable {
         return releasedate;
     }
 
-    public String getCover() {
-        return cover;
-    }
-
-    public String getConsole() {
-        return console;
-    }
-
     public String getMetascore() {
         return metascore;
     }
 
     public String getIgnscore() {
         return ignscore;
-    }
-
-    public String getIgdbscore() {
-        return igdbscore;
     }
 
     // Setters
@@ -111,41 +92,30 @@ public class Game implements Serializable {
         this.releasedate = releasedate;
     }
 
-    public void setCover(String cover) {
-        this.cover = cover;
-    }
-
-    public void setConsole(String console) {
-        this.console = console;
-    }
-
     public void setMetascore(String metascore) {
-        this.cover = metascore;
+        this.metascore = metascore;
     }
 
     public void setIgnscore(String ignscore) {
-        this.console = ignscore;
+        this.ignscore = ignscore;
     }
 
-    public void setIgdbscore(String igdbscore) {
-        this.console = igdbscore;
-    }
 
     // List Setter for Reviews
-    public List<Review> getReview() {
+    public List<edu.ait.games.dto.Review> getReview() {
         return review;
     }
 
-    public void setReview(List<Review> review) {
+    public void setReview(List<edu.ait.games.dto.Review> review) {
         this.review = review;
     }
 
     // List Setter for Follower
-    public List<Follower> getFollower() {
+    public List<edu.ait.games.dto.Follower> getFollower() {
         return follower;
     }
 
-    public void setFollower(List<Follower> follower) {
+    public void setFollower(List<edu.ait.games.dto.Follower> follower) {
         this.follower = follower;
     }
 
@@ -154,14 +124,11 @@ public class Game implements Serializable {
         return "Game{" +
                 "Id=" + id +
                 ", name='" + name + '\'' +
-                ", cover='" + cover + '\'' +
-                ", console='" + console + '\'' +
                 ", publisher='" + publisher + '\'' +
                 ", genre='" + genre + '\'' +
                 ", releasedate='" + releasedate + '\'' +
                 ", metascore='" + metascore + '\'' +
                 ", ignscore='" + ignscore + '\'' +
-                ", igdbscore='" + igdbscore + '\'' +
                 '}';
     }
 }

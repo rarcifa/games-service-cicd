@@ -1,4 +1,4 @@
-package edu.ait.gameCollection.swagger.config;
+package edu.ait.games.swagger.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

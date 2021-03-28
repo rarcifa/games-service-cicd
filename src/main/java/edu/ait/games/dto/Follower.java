@@ -1,4 +1,4 @@
-package edu.ait.gameCollection.dto;
+package edu.ait.games.dto;
 
 import javax.persistence.*;
 import java.io.Serializable;

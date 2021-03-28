@@ -1,4 +1,4 @@
-package edu.ait.gameCollection;
+package edu.ait.games;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,13 +1,11 @@
-package edu.ait.gameCollection.repositories;
+package edu.ait.games.repositories;
 
-import edu.ait.gameCollection.dto.Game;
+import edu.ait.games.dto.Game;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.jpa.repository.QueryHints;
 
-import javax.persistence.QueryHint;
 import java.util.List;
 
 public interface GameRepository extends JpaRepository<Game, Integer> {
