@@ -1,6 +1,7 @@
 package edu.ait.gameCollection.repositories;
 
 import edu.ait.gameCollection.dto.Game;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -22,4 +23,10 @@ public interface GameRepository extends JpaRepository<Game, Integer> {
 
         long getTotalFollower();
     }
+
+    // Find by Genre
+    Page<Game> findByGenre(String genre, Pageable pageable);
+
+    // Find by Rating
+    Page<Game> findByMetascore(String metascore, Pageable pageable);
 }
