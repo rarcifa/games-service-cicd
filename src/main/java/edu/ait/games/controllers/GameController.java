@@ -23,14 +23,6 @@ public class GameController {
     GameRepository gamesRepository;
 
     // get all Games pageable
-    // @GetMapping("items")
-    // public Page<Game> getAllGames(Pageable pageable) {
-    // return all Games
-    // return gamesRepository.findAll(pageable);
-    // }
-
-
-    // get all Games pageable
     @GetMapping(value="/games", produces= MediaType.APPLICATION_JSON_VALUE)
     public Page<Game> getAllGames(Pageable pageable) {
         //return all Games

@@ -17,13 +17,6 @@ public class ReviewController {
     @Autowired
     ReviewRepository reviewRepository;
 
-    // get all Games pageable
-    // @GetMapping("items")
-    // public Page<Game> getAllGames(Pageable pageable) {
-    // return all Games
-    // return gamesRepository.findAll(pageable);
-    // }
-
     // get all reviews
     @GetMapping("reviews")
     public List<Review> getAllReviews() {
