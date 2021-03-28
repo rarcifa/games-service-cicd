@@ -22,16 +22,6 @@ public class Game implements Serializable {
     private String metascore;
     private String ignscore;
 
-    @OneToMany
-    @JoinColumn(name = "Id")
-    private List<edu.ait.games.dto.Review> review;
-
-    @OneToMany
-    @JoinColumn(name = "follower_id")
-    private List<edu.ait.games.dto.Follower> follower;
-    public Game() {
-    }
-
     public Game(Integer id, String name, String publisher, String genre, String releasedate, String metascore, String ignscore) {
         this.id = id;
         this.name = name;
@@ -98,25 +88,6 @@ public class Game implements Serializable {
 
     public void setIgnscore(String ignscore) {
         this.ignscore = ignscore;
-    }
-
-
-    // List Setter for Reviews
-    public List<edu.ait.games.dto.Review> getReview() {
-        return review;
-    }
-
-    public void setReview(List<edu.ait.games.dto.Review> review) {
-        this.review = review;
-    }
-
-    // List Setter for Follower
-    public List<edu.ait.games.dto.Follower> getFollower() {
-        return follower;
-    }
-
-    public void setFollower(List<edu.ait.games.dto.Follower> follower) {
-        this.follower = follower;
     }
 
     @Override

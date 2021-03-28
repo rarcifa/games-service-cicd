@@ -1,13 +1,5 @@
-package edu.ait.gameCollection;
+package edu.ait.games;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class WineManagerApplicationTests {
-
-	@Test
-	void contextLoads() {
-	}
-
-}

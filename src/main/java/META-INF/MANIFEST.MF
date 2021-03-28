@@ -1,3 +1,3 @@
 Manifest-Version: 1.0
-Main-Class: edu.ait.gameCollection.Main
+Main-Class: edu.ait.games.Main
 

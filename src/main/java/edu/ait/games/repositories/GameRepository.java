@@ -10,17 +10,8 @@ import java.util.List;
 
 public interface GameRepository extends JpaRepository<Game, Integer> {
 
-    @Query("SELECT g.id AS gameId, COUNT(f.f_id) AS totalFollower FROM Game g JOIN g.follower f GROUP BY g.id")
-    public List<GameFollower> findAllWithFollower();
-
-    @Query("SELECT DISTINCT g FROM Game g LEFT JOIN fetch g.review")
+    @Query("SELECT g FROM Game g")
     public List<Game> findAllWithReviews();
-
-    interface GameFollower {
-        int getGameId();
-
-        long getTotalFollower();
-    }
 
     // Find by Genre
     Page<Game> findByGenre(String genre, Pageable pageable);
